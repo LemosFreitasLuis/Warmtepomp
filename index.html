@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title id="daikin">Daikin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Ervaar de voordelen van Daikin's airco's en warmtepompen in onze experience centers en profiteer van cashbacks. Ontdek of jouw huis klaar is voor een warmtepomp en meer.">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Header-->
+    <script src='script/navbar.js'></script>
+
+    <div class="page">
+        <h1>Verwarmen en koelen zonder zorgen. Met Daikin, natuurlijk.</h1>
+        <p>In de Daikin Experience Centers kan je onze airco’s en warmtepompen zien, horen en ervaren zoals in je eigen huis.<br>
+        Profiteer bovendien van onze cashback en bespaar tot 500 € door je oude airco te vervangen. <a href="https://www.daikin.be/nl_be/particulier/acties/replacement-cashback.html" target="_blank">Meer informatie.</a></p>
+        <img src="images/Daikin-warmtepomp-min.jpg" alt="Daikin warmtepomp">
+    </div>
+
+    <div id="pageOplossingen" class="oplossingen">
+        <h2>Is jouw huis klaar voor een warmtepomp?</h2>
+        <p>Denk je aan het installeren van een warmtepomp, maar weet je niet zeker of deze innovatieve en energiezuinige oplossing geschikt is voor je woning? Beantwoord in minder dan 2 minuten enkele vragen om te weten of jouw huis een warmtepomp kan verwelkomen en om een idee te krijgen van de ideale warmtepomp voor jouw woning. Houd er rekening mee dat deze test indicatief is; voor een nauwkeurige evaluatie kan je contact opnemen met een installateur.</p>
+        <img src="images/Oplossingen.png" alt="Oplossingen">
+    </div>
+
+    <div class="oplossingen">
+        <h3>Wat voor project heb je?</h3>
+        <div class="buttonsOplossingen">
+            <button onclick="selectedOplossing()">Een nieuwbouw of een totaalrenovatie</button>
+            <button onclick="selectedOplossing2()">Mijn verwarmingsketel vervangen</button>
+            <button onclick="selectedOplossing3()">Mijn elektrische verwarming vervangen</button>
+        </div>
+    </div>
+    <div id="keuzeOplossingen" class="oplossingen">   
+        <div class="buttonsOplossingen">
+            <h3>Keuze: Een nieuwbouw of een totaalrenovatie</h3>
+            <button onclick="showOppervlakte()" class="keuze">Met vloerverwarming</button>
+            <button onclick="showOppervlakte()" class="keuze2">Met ventilo-convectoren of met radiatoren op lage temperatuur</button>
+            <button onclick="showOppervlakte()" class="keuze3">Met vloerverwarming en ventilo-convectoren</button>
+            <button onclick="showOppervlakte()" class="keuze4">Met vloerverwarming en radiatoren op lage temperatuur</button>
+        </div>
+    </div>
+    <div id="keuzeOplossingen2" class="oplossingen">   
+        <div class="buttonsOplossingen">
+            <h3>Keuze: Mijn verwarmingsketel vervangen</h3>
+            <button>Met vloerverwarming</button>
+            <button>Met ventilo-convectoren of met radiatoren</button>
+            <button>Met vloerverwarming en ventilo-convectoren</button>
+            <button>Met vloerverwarming en radiatoren</button>
+        </div>
+    </div>
+    <div id="keuzeOplossingen3" class="oplossingen">   
+        <div class="buttonsOplossingen">
+            <h3>Keuze: Mijn elektrische verwarming vervangen</h3>
+            <h4>Wil je ook sanitair warm water produceren met je warmtepomp?</h4>
+            <button>Ja</button>
+            <button>Nee</button>
+        </div>
+    </div>
+    <div id="oppervlakte" class="oplossingen">   
+        <div class="buttonsOplossingen">
+            <h3 class="keuzeOppervlakte">Keuze: ***</h3>
+            <button>Minder dan 160m²</button>
+            <button>Tussen 160m² en 240m²</button>
+            <button>Tussen 240m² en 280m²</button>
+            <button>Meer dan 280m²</button>
+        </div>
+    </div>
+    <script src="script/main.js"></script>
+    <!--Footer-->
+    <script src='script/footer.js'></script>
+</body>
+</html>
