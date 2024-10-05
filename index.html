@@ -63,13 +63,13 @@
     <div id="oppervlakte" class="oplossingen">   
         <div class="buttonsOplossingen">
             <h3 class="keuzeOppervlakte">Keuze: ***</h3>
-            <button>Minder dan 160m²</button>
-            <button>Tussen 160m² en 240m²</button>
-            <button>Tussen 240m² en 280m²</button>
-            <button>Meer dan 280m²</button>
+            <button onclick="showForum()">Minder dan 160m²</button>
+            <button onclick="showForum()">Tussen 160m² en 240m²</button>
+            <button onclick="showForum()">Tussen 240m² en 280m²</button>
+            <button onclick="showForum()">Meer dan 280m²</button>
         </div>
     </div>
-    <form action="showdata.php" method="post">
+    <form id="forumOplossingen" action="showdata.php" method="post">
         <label for="voornaam">Voornaam:*</label>
         <input type="text" id="voornaam" name="voornaam" required><br><br>
         

@@ -4,6 +4,7 @@ let oplossing3 = document.getElementById("keuzeOplossingen3");
 let oppervlakte = document.getElementById("oppervlakte");
 let keuzeOppervlakte = document.querySelector(".keuzeOppervlakte");
 let keuzes = document.querySelectorAll(".keuze, .keuze2, .keuze3, .keuze4");
+let forum = document.getElementById("forumOplossingen");
 
 function responsiveButton() {
   var responsive = document.getElementById("myTopnav");
@@ -18,11 +19,13 @@ function selectedOplossing() {
   if (oplossing.style.display === "block") {
     oplossing.style.display = "none";
     oppervlakte.style.display = "none";
+    forum.style.display = "none";
   }
   else {
     oplossing.style.display = "block";
     oplossing2.style.display = "none";
     oplossing3.style.display = "none";
+    forum.style.display = "none";
   }
 }
 
@@ -35,6 +38,7 @@ function selectedOplossing2() {
     oplossing.style.display = "none";
     oplossing3.style.display = "none";
     oppervlakte.style.display = "none";
+    forum.style.display = "none";
   }
 }
 
@@ -47,16 +51,27 @@ function selectedOplossing3() {
     oplossing.style.display = "none";
     oplossing2.style.display = "none";
     oppervlakte.style.display = "none";
+    forum.style.display = "none";
   }
 }
 
 function showOppervlakte() {
   if (oppervlakte.style.display === "block") {
       /*oppervlakte.style.display = "none";*/
+      forum.style.display = "none";
   }
   else {
     oppervlakte.style.display = "block";
   }
+}
+
+function showForum() {
+  if (forum.style.display === "block") {
+    forum.style.display = "none";
+}
+else {
+  forum.style.display = "block";
+}
 }
 
 keuzes.forEach(keuze => {
