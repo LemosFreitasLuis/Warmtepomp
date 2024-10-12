@@ -29,6 +29,7 @@ function selectedOplossing() {
     oplossing2.style.display = "none";
     oplossing3.style.display = "none";
     forum.style.display = "none";
+    oppervlakte.style.display = "none";
     oppervlakte2.style.display = "none";
     verwarmingsketel.style.display = "none";
   }
