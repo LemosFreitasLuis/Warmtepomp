@@ -1,6 +1,7 @@
 let url1;
 let url2;
 let url3;
+let url4;
 
 function changeURL() {
     const checkIfIdExist = document.getElementById("daikin");
@@ -9,10 +10,12 @@ function changeURL() {
         url1 = "index.html";
         url2 = "pages/producten.html";
         url3 = "#pageOplossingen";
+        url4 = "pages/advies.html"
     } else {
         url1 = "../index.html";
         url2 = "../pages/producten.html";
         url3 = "../index.html#pageOplossingen";
+        url4 = "../pages/advies.html"
     }
 }
 
@@ -24,7 +27,7 @@ function createNavbar() {
                 <a class="logo" href="${url1}">Daikin</a>
                 <a href="${url2}">Producten</a>
                 <a href="${url3}">Oplossingen</a>
-                <a href="#">Advies</a>
+                <a href="${url4}">Advies</a>
                 <a href="#">Services</a>
                 <a href="#">Showrooms</a>
                 <a href="#">Cashbacks</a>
@@ -39,37 +42,3 @@ function createNavbar() {
 
 // Initieer de creatie van de navbar
 createNavbar();
-
-
-
-
-
-
-
-
-
-
-
-
-//Oude code
-// let url1;
-// let url2;
-// let url3;
-// changeURL();
-
-// var navbar= '<header><div class="topnav" id="myTopnav"> <a class="logo" href="'+ url1 +'">Daikin</a> <a href="' + url2 + '">Producten</a> <a href="' + url3 + '">Oplossingen</a> <a>Advies</a> <a>Services</a> <a>Showrooms</a> <a>Cashbacks</a> <a href="javascript:void(0);" class="icon" onclick="responsiveButton()"><i class="fa fa-bars"></i></a> </div>    </header>';
-// document.querySelector("body").insertAdjacentHTML("afterbegin", navbar);
-
-// function changeURL() {
-//     let checkIfIdExist = document.getElementById("daikin");
-//     if(checkIfIdExist) {
-//         url1 = "index.html";
-//         url2 = "pages/producten.html";
-//         url3 = "#pageOplossingen";
-//     }
-//     else {
-//         url1 = "../index.html";
-//         url2 = "../pages/producten.html";
-//         url3 = "../index.html#pageOplossingen";
-//     }
-// }

@@ -212,6 +212,63 @@ img {
   color: #f2f2f2;
 }
 
+/*Advies pagina*/
+.adviesKeuze {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.advies {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.advies:hover {
+    background-color: #0056b3;
+}
+
+.button-koelen {
+    background-color: #28a745;
+}
+
+.button-koelen:hover {
+    background-color: #218838;
+}
+
+.button-luchtzuiveren {
+    background-color: #17a2b8;
+}
+
+.button-luchtzuiveren:hover {
+    background-color: #117a8b;
+}
+
+.imageAdvies {
+  display: flex;
+  flex-wrap: wrap; /* Zorg ervoor dat de inhoud netjes wordt gebroken op kleinere schermen */
+  justify-content: space-around; /* Verdeel de ruimte gelijkmatig tussen de items */
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
 /*Footer*/
 footer {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
