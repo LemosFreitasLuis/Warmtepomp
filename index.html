@@ -56,16 +56,16 @@
         <div class="buttonsOplossingen">
             <h3>Keuze: Mijn elektrische verwarming vervangen</h3>
             <h4>Wil je ook sanitair warm water produceren met je warmtepomp?</h4>
-            <button>Ja</button>
-            <button>Nee</button>
+            <button onclick="showForum()" class="keuzeSanitair">Ja</button>
+            <button onclick="showForum()" class="keuzeSaniteir2">Nee</button>
         </div>
     </div>
 
     <div id="verwarmingsketel" class="oplossingen">
         <div class="buttonsOplossingen">
             <h3>Welke soort verwarmingsketel heb je nu?</h3>
-            <button onclick="showOppervlakte2()">Een mazoutketel/stookolieketel</button>
-            <button onclick="showOppervlakte2()">Een gasketel</button>
+            <button onclick="showOppervlakte2()" class="verwarmingsketel">Een mazoutketel/stookolieketel</button>
+            <button onclick="showOppervlakte2()" class="verwarmingsketel2">Een gasketel</button>
         </div>
     </div>
 
@@ -98,6 +98,8 @@
         <input type="hidden" id="projectType" name="projectType" value="">
         <input type="hidden" id="keuzeType" name="keuzeType" value="">
         <input type="hidden" id="oppervlakteType" name="oppervlakteType" value="">
+        <input type="hidden" id="sanitairType" name="sanitairType" value="">
+        <input type="hidden" id="verwarmingsketelType" name="verwarmingsketelType" value="">
 
         <label for="voornaam">Voornaam:*</label>
         <input type="text" id="voornaam" name="voornaam" required><br><br>
