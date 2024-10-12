@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             selectedVerwarmingsketel = this.innerText;
             saniteirInput.value = "";
+            keuzeInput.value = "";
             verwarmingsketelInput.value = "Verwarmingsketel: " + selectedVerwarmingsketel;
             console.log("Selected verwarmingsketel:", selectedVerwarmingsketel)
         })
