@@ -110,7 +110,3 @@ keuzes.forEach(keuze => {
     keuzeOppervlakte.innerHTML = "Keuze: " + keuze.innerHTML;
   });
 });
-
-function saveButtonValue() {
-  console.log(keuze.innerHTML);
-}
