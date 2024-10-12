@@ -112,6 +112,31 @@
     </form>
     <script src="script/main.js"></script>
     <script src="script/formvalue.js"></script>
+    <!--Formspree --><script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <!--Formspree --><script>
+        window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+        formbutton("create", {action: "https://formspree.io/xanywold",
+        title: "Heeft u vragen?", 
+        fields: [
+            {
+                name: "email",
+                type: "email",
+                label: "Email",
+                required: true
+            },
+            {
+                name: "Stel uw vraag",
+                type: "textarea"
+            },],
+        styles: {
+            button: {
+                background: "#00588e"
+            },
+            title: {
+                background: "#00588e",
+            }
+        },
+        })</script>
     <!--Footer-->
     <script src='script/footer.js'></script>
 </body>
