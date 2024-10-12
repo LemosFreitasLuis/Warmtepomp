@@ -46,10 +46,10 @@
     <div id="keuzeOplossingen2" class="oplossingen">   
         <div class="buttonsOplossingen">
             <h3>Keuze: Mijn verwarmingsketel vervangen</h3>
-            <button>Met vloerverwarming</button>
-            <button>Met ventilo-convectoren of met radiatoren</button>
-            <button>Met vloerverwarming en ventilo-convectoren</button>
-            <button>Met vloerverwarming en radiatoren</button>
+            <button onclick="showOppervlakte()">Met vloerverwarming</button>
+            <button onclick="showVerwarmingsketel()">Met ventilo-convectoren of met radiatoren</button>
+            <button onclick="showVerwarmingsketel()">Met vloerverwarming en ventilo-convectoren</button>
+            <button onclick="showVerwarmingsketel()">Met vloerverwarming en radiatoren</button>
         </div>
     </div>
     <div id="keuzeOplossingen3" class="oplossingen">   
@@ -60,6 +60,15 @@
             <button>Nee</button>
         </div>
     </div>
+
+    <div id="verwarmingsketel" class="oplossingen">
+        <div class="buttonsOplossingen">
+            <h3>Welke soort verwarmingsketel heb je nu?</h3>
+            <button onclick="showOppervlakte2()">Een mazoutketel/stookolieketel</button>
+            <button onclick="showOppervlakte2()">Een gasketel</button>
+        </div>
+    </div>
+
     <div id="oppervlakte" class="oplossingen">   
         <div class="buttonsOplossingen">
             <h3 class="keuzeOppervlakte">Keuze: ***</h3>
@@ -69,15 +78,29 @@
             <button onclick="showForum()">Meer dan 280m²</button>
         </div>
     </div>
+
+    <div id="oppervlakte2" class="oplossingen">   
+        <div class="buttonsOplossingen">
+            <h3>Hoeveel gas verbruik je per jaar? (Je kan je verbruik terugvinden op je energiefactuur.)</h3>
+            <button onclick="showForum()">Minder dan 2400m³</button>
+            <button onclick="showForum()">Tussen 2400m³ en 4300m³</button>
+            <button onclick="showForum()">Meer dan 4300m³</button>
+        </div>
+    </div>
+    
     <form id="forumOplossingen" action="https://formspree.io/f/xanywold" method="post">
+        <p>Je bent er bijna.</p>
+        <p>Vul het formulier in zodat we je verder kunnen begeleiden aan de hand van je resultaat.<br>
+        Als jouw huis klaar is voor een warmtepomp, sturen we je meer informatie over de beste oplossing.</p>
+        <p>Indien nodig sturen we meer informatie en tips om je huis warmtepomp-klaar te maken.</p>
         <label for="voornaam">Voornaam:*</label>
         <input type="text" id="voornaam" name="voornaam" required><br><br>
         
         <label for="achternaam">Achternaam:*</label>
         <input type="text" id="achternaam" name="achternaam" required><br><br>
         
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
+        <label for="email">Email:*</label>
+        <input type="email" id="email" name="email" required><br><br>
         
         <input type="submit" value="Submit">
     </form>

@@ -2,6 +2,8 @@ let oplossing = document.getElementById("keuzeOplossingen");
 let oplossing2 = document.getElementById("keuzeOplossingen2");
 let oplossing3 = document.getElementById("keuzeOplossingen3");
 let oppervlakte = document.getElementById("oppervlakte");
+let oppervlakte2 = document.getElementById("oppervlakte2");
+let verwarmingsketel = document.getElementById("verwarmingsketel");
 let keuzeOppervlakte = document.querySelector(".keuzeOppervlakte");
 let keuzes = document.querySelectorAll(".keuze, .keuze2, .keuze3, .keuze4");
 let forum = document.getElementById("forumOplossingen");
@@ -19,6 +21,7 @@ function selectedOplossing() {
   if (oplossing.style.display === "block") {
     oplossing.style.display = "none";
     oppervlakte.style.display = "none";
+    oppervlakte2.style.display = "none";
     forum.style.display = "none";
   }
   else {
@@ -26,6 +29,8 @@ function selectedOplossing() {
     oplossing2.style.display = "none";
     oplossing3.style.display = "none";
     forum.style.display = "none";
+    oppervlakte2.style.display = "none";
+    verwarmingsketel.style.display = "none";
   }
 }
 
@@ -38,7 +43,10 @@ function selectedOplossing2() {
     oplossing.style.display = "none";
     oplossing3.style.display = "none";
     oppervlakte.style.display = "none";
+    oppervlakte2.style.display = "none";
     forum.style.display = "none";
+    oppervlakte2.style.display = "none";
+    verwarmingsketel.style.display = "none";
   }
 }
 
@@ -52,26 +60,49 @@ function selectedOplossing3() {
     oplossing2.style.display = "none";
     oppervlakte.style.display = "none";
     forum.style.display = "none";
+    oppervlakte2.style.display = "none";
+    verwarmingsketel.style.display = "none";
+  }
+}
+
+function showVerwarmingsketel() {
+  if (verwarmingsketel.style.display === "block") {
+    verwarmingsketel.style.display = "none";
+  }
+  else {
+    verwarmingsketel.style.display = "block";
+    oppervlakte.style.display = "none";
+    oppervlakte2.style.display = "none";
   }
 }
 
 function showOppervlakte() {
   if (oppervlakte.style.display === "block") {
-      /*oppervlakte.style.display = "none";*/
       forum.style.display = "none";
   }
   else {
     oppervlakte.style.display = "block";
+    oppervlakte2.style.display = "none";
+    verwarmingsketel.style.display = "none";
+  }
+}
+
+function showOppervlakte2() {
+  if (oppervlakte2.style.display === "block") {
+    forum.style.display = "none";
+  }
+  else {
+    oppervlakte2.style.display = "block";
   }
 }
 
 function showForum() {
   if (forum.style.display === "block") {
-    forum.style.display = "none";
-}
-else {
-  forum.style.display = "block";
-}
+    /*forum.style.display = "none";*/
+  }
+  else {
+    forum.style.display = "block";
+  }
 }
 
 keuzes.forEach(keuze => {
@@ -80,28 +111,6 @@ keuzes.forEach(keuze => {
   });
 });
 
-
-
-
-
-
-
-
-/*Oude code*/
-// keuze.addEventListener('click', function() {
-//   keuzeOppervlakte.innerHTML = "Keuze: " + keuze.innerHTML;
-// }); 
-
-// keuze2.addEventListener('click', function() {
-//   keuzeOppervlakte.innerHTML = "Keuze: " + keuze2.innerHTML;
-// }); 
-
-// keuze3.addEventListener('click', function() {
-//   keuzeOppervlakte.innerHTML = "Keuze: " + keuze3.innerHTML;
-// }); 
-
-// keuze4.addEventListener('click', function() {
-//   keuzeOppervlakte.innerHTML = "Keuze: " + keuze4.innerHTML;
-// }); 
-
-
+function saveButtonValue() {
+  console.log(keuze.innerHTML);
+}

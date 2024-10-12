@@ -24,10 +24,13 @@ body {
 
 #forumOplossingen {
   padding: 40px;
+  width: 50%;
   margin-bottom: 20px;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input[type=text], input[type=email] {
@@ -75,6 +78,14 @@ label {
 }
 
 #forumOplossingen {
+  display: none;
+}
+
+#oppervlakte2 {
+  display: none;
+}
+
+#verwarmingsketel {
   display: none;
 }
 
@@ -256,6 +267,10 @@ footer > div > p {
   }
   img {
     width: 100%;
+  }
+  
+  #forumOplossingen {
+    width: 90%;
   }
 }
 
