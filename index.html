@@ -118,6 +118,13 @@
     <!--Formspree --><script>
         window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
         formbutton("create", {action: "https://formspree.io/xanywold",
+        onResponse: function(ok, setStatus) {
+            if (ok) {
+                setStatus("Wij zullen zo spoedig mogelijk uw vraag beantwoorden.");
+            } else {
+                setStatus("<span style='color:red'>We hebben een probleem ondervonden.</span>");
+            }
+        },
         title: "Heeft u vragen?", 
         fields: [
             {
