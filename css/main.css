@@ -213,6 +213,45 @@ img {
 }
 
 /*Advies pagina*/
+
+.adviesPage {
+  width: 80%;
+  padding: 50px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adviesPage p {
+  font-size: 20px;
+}
+
+.adviesPage button {
+  padding: 20px;
+  background-color: orange;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  font-size: 15px;
+  float: right;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.adviesPage button:hover {
+  background-color: orangered;
+  transform: translateY(-2px);
+}
+
+.adviesPage img {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .adviesKeuze {
     background-color: white;
     padding: 30px;
@@ -243,6 +282,37 @@ img {
 
 .advies:hover {
     background-color: #0056b3;
+}
+
+.adviesFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Adds some space between the paragraph and button */
+  margin: 20px 0;
+}
+
+.adviesFlex p {
+  flex: 1; /* Makes the paragraph take up remaining space */
+  text-align: left;
+}
+
+.adviesFlex a {
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.adviesFlex button {
+  background-color: orange;
+  color: white;
+  padding: 30px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3;
+}
+
+.adviesFlex button:hover {
+  background-color: orangered;
 }
 
 .button-koelen {
@@ -314,19 +384,38 @@ footer > div > p {
    display: block;
    text-align: left;
   }
+
   .card {
     width: 80%;
     margin: 10px auto; /* Centreer de kaarten op kleinere schermen */
   }
+
   .page {
     padding-left: 50px;
     padding-right: 50px;
   }
+  
+  #forumOplossingen {
+    width: 80%;
+  }
+  
+  .adviesFlex {
+    flex-direction: column; /* Stack the elements on top of each other on small screens */
+  }
+
+  .adviesPage img {
+    width: 100%;
+  }
+
   img {
     width: 100%;
   }
-  
-  #forumOplossingen {
+
+  .adviesFlex button {
+    margin-top: 15px;
+  }
+
+  .adviesKeuze {
     width: 90%;
   }
 }
