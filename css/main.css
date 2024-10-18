@@ -12,7 +12,9 @@ body {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  font-size: 18px;
 }
+
 
 .oplossingen {
   padding: 40px;
@@ -20,6 +22,7 @@ body {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  font-size: 18px;
 }
 
 #forumOplossingen {
@@ -415,8 +418,12 @@ footer > div > p {
     margin-top: 15px;
   }
 
+  .adviesPage {
+    width: 70%;
+  }
+
   .adviesKeuze {
-    width: 90%;
+    width: 80%;
   }
 }
 
