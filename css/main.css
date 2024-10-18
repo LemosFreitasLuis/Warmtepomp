@@ -269,24 +269,6 @@ img {
 
 }
 
-.advies {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.advies:hover {
-    background-color: #0056b3;
-}
-
 .adviesFlex {
   display: flex;
   align-items: center;
@@ -318,20 +300,10 @@ img {
   background-color: orangered;
 }
 
-.button-koelen {
-    background-color: #28a745;
-}
-
-.button-koelen:hover {
-    background-color: #218838;
-}
-
-.button-luchtzuiveren {
-    background-color: #17a2b8;
-}
-
-.button-luchtzuiveren:hover {
-    background-color: #117a8b;
+.adviesVideo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .imageAdvies {
@@ -424,6 +396,10 @@ footer > div > p {
 
   .adviesKeuze {
     width: 80%;
+  }
+
+  .adviesVideo {
+    width: 100%;
   }
 }
 
