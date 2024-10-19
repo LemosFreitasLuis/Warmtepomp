@@ -319,6 +319,18 @@ img {
   padding: 0 10px;
 }
 
+.openGames {
+  background-color: #04AA6D;
+  padding: 40px;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /*Footer*/
 footer {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
