@@ -6,16 +6,18 @@
     <title id="snake">Snake Game</title>
     <link rel='stylesheet' type='text/css' media='screen' href='../../css/main.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <style>
         body {
             text-align: center;
-            background-color: rgba(0, 128, 0, 0.526);
+            background-image: url("snake-background.jpg");
         }
         canvas {
             border: 2px solid black;
             background-color: #f0f0f0;
             margin: 20px auto;
+            display: block;
+            max-width: 100%; /* Responsive canvas */
+            height: auto;
         }
         #startButton {
             padding: 10px 20px;
@@ -26,6 +28,14 @@
             font-size: 18px;
             margin: 10px;
         }
+        #controls {
+            margin: 20px;
+        }
+        #controls button {
+            font-size: 24px;
+            padding: 10px;
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
@@ -33,47 +43,16 @@
     <h1>Snake Game</h1>
     <div id="scoreDisplay">Score: 0 | High Score: 0</div>
     <button id="startButton">Start Game</button>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <canvas id="gameCanvas"></canvas>
 
+    <!-- On-screen controls for mobile -->
+    <div id="controls">
+        <button id="upButton">↑</button><br>
+        <button id="leftButton">←</button>
+        <button id="downButton">↓</button>
+        <button id="rightButton">→</button>
+    </div>
+    <script src="../../script/main.js"></script>
     <script src="snake.js"></script>
-    <script src='../../script/main.js'></script>
-        <!--Formspree --><script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <!--Formspree --><script>
-        window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-        formbutton("create", {action: "https://formspree.io/xanywold",
-        onResponse: function(ok, setStatus) {
-            if (ok) {
-                setStatus("Wij zullen zo spoedig mogelijk uw vraag beantwoorden.");
-            } else {
-                setStatus("<span style='color:red'>We hebben een probleem ondervonden.</span>");
-            }
-        },
-        theme: "classic",
-        title: "Heeft u vragen?", 
-        description: "Stel je vraag, en ons team staat klaar om je snel te helpen!",
-        fields: [
-            {
-                name: "email",
-                type: "email",
-                label: "Email",
-                required: true
-            },
-            {
-                name: "Stel uw vraag",
-                type: "textarea"
-            },       
-            {
-                type: "submit"
-            }],
-        styles: {
-            button: {
-                background: "#00588e"
-            },
-            title: {
-                background: "#00588e",
-            }
-        },
- 
-        })</script>
 </body>
 </html>

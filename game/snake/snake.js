@@ -1,10 +1,17 @@
-// Snake game variables
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-const gridSize = 20; // Size of each square
-let snake = [{x: 160, y: 160}]; // Snake's body (starting position)
-let direction = {x: gridSize, y: 0}; // Snake's movement direction (initially moving right)
+// Dynamic canvas sizing
+function resizeCanvas() {
+    canvas.width = Math.min(window.innerWidth, 400); // Cap width at 400px for larger screens
+    canvas.height = canvas.width; // Keep the canvas square
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas(); // Call it initially to set canvas size
+
+const gridSize = canvas.width / 20; // Adjust grid size dynamically based on canvas size
+let snake = [{x: gridSize * 8, y: gridSize * 8}]; // Snake starting position
+let direction = {x: gridSize, y: 0}; // Snake starts moving right
 let food = {x: 0, y: 0}; // Food position
 let gameInterval;
 let gameRunning = false;
@@ -25,8 +32,8 @@ function startGame() {
 
 // Function to reset the game state
 function resetGame() {
-    snake = [{x: 160, y: 160}];
-    direction = {x: gridSize, y: 0};
+    snake = [{x: gridSize * 8, y: gridSize * 8}]; // Reset snake position
+    direction = {x: gridSize, y: 0}; // Reset direction
     score = 0;
     gameRunning = true;
     clearInterval(gameInterval); // Clear any previous game loop
@@ -52,7 +59,7 @@ function updateSnakePosition() {
     const head = {x: snake[0].x + direction.x, y: snake[0].y + direction.y}; // New head based on direction
     snake.unshift(head); // Add new head to the snake
 
-    // Remove the tail unless the snake ate food (length increases)
+    // Remove the tail unless the snake ate food
     if (head.x === food.x && head.y === food.y) {
         score++;
         placeFood(); // Place new food when snake eats
@@ -119,7 +126,7 @@ function drawGame() {
     ctx.fillRect(food.x, food.y, gridSize, gridSize);
 }
 
-// Keydown event to control snake's direction
+// Keydown event to control snake's direction (desktop)
 document.addEventListener('keydown', (event) => {
     switch(event.code) {
         case 'ArrowUp':
@@ -137,7 +144,58 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// Function to update the score display on the screen
+// Touch controls (mobile swipe)
+let touchStartX = 0;
+let touchStartY = 0;
+
+// Touch start event (store the starting position)
+document.addEventListener('touchstart', (event) => {
+    const touch = event.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+});
+
+// Touch end event (detect swipe direction)
+document.addEventListener('touchend', (event) => {
+    const touch = event.changedTouches[0];
+    const touchEndX = touch.clientX;
+    const touchEndY = touch.clientY;
+
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Horizontal swipe
+        if (deltaX > 0 && direction.x === 0) {
+            direction = {x: gridSize, y: 0}; // Swipe right
+        } else if (deltaX < 0 && direction.x === 0) {
+            direction = {x: -gridSize, y: 0}; // Swipe left
+        }
+    } else {
+        // Vertical swipe
+        if (deltaY > 0 && direction.y === 0) {
+            direction = {x: 0, y: gridSize}; // Swipe down
+        } else if (deltaY < 0 && direction.y === 0) {
+            direction = {x: 0, y: -gridSize}; // Swipe up
+        }
+    }
+});
+
+// Add event listeners for on-screen control buttons
+document.getElementById('upButton').addEventListener('click', () => {
+    if (direction.y === 0) direction = {x: 0, y: -gridSize}; // Move up
+});
+document.getElementById('downButton').addEventListener('click', () => {
+    if (direction.y === 0) direction = {x: 0, y: gridSize}; // Move down
+});
+document.getElementById('leftButton').addEventListener('click', () => {
+    if (direction.x === 0) direction = {x: -gridSize, y: 0}; // Move left
+});
+document.getElementById('rightButton').addEventListener('click', () => {
+    if (direction.x === 0) direction = {x: gridSize, y: 0}; // Move right
+});
+
+// Update the score and high score display
 function updateScoreDisplay() {
-    document.getElementById('scoreDisplay').innerText = `Score: ${score} | High Score: ${highScore}`;
+    document.getElementById('scoreDisplay').textContent = `Score: ${score} | High Score: ${highScore}`;
 }
