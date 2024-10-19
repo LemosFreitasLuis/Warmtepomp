@@ -6,23 +6,28 @@ body {
 }
 
 .page {
-  text-align: center;
-  padding: 20px;
+  padding: 40px;
+  width: 85%;
   margin-bottom: 20px;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;   
 }
 
 
 .oplossingen {
   padding: 40px;
+  width: 85%;
   margin-bottom: 20px;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #forumOplossingen {
@@ -366,8 +371,11 @@ footer > div > p {
   }
 
   .page {
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 80%;
+  }
+
+  .oplossingen {
+    width: 80%;
   }
   
   #forumOplossingen {
